@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "manls"
+version = "0.1.0"
+description = "A style Dash man page viewer for the terminal"
+requires-python = ">=3.8"
+dependencies = [
+    "textual>=0.50.0",
+    "click>=8.0.0",
+]
+
+[project.scripts]
+manls = "manls.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
